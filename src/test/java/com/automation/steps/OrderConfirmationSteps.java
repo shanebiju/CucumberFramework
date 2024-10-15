@@ -15,5 +15,6 @@ public class OrderConfirmationSteps {
     @When("user clicks back home button")
     public void userClicksBackHomeButton() {
         orderConfirmationPage.returnHome();
+        //Assert.fail("failed to go back home");
     }
 }

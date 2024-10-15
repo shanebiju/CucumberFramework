@@ -5,22 +5,22 @@ Feature: verify assignment test cases for saucedemo
     When user login username "standard_user" and password "secret_sauce"
     Then verify user is on home page
 
-  Scenario:
+  Scenario:verify alphabetical sorting
     When user selects Name (Z to A)
     Then verify products are sorted by Z to A
 
-  Scenario:
+  Scenario:verify price sorting
     When user selects Price (high to low)
     Then verify products are sorted in descending order of price
 
-  Scenario:
+  Scenario:verify items in cart
     When user adds all items into cart
     Then verify cart icon displays total count of items on cart
     When user click on cart icon
     Then verify user is on cart page
     And verify items on cart page is same as item you added in cart
 
-  Scenario:
+  Scenario:verify total price of items in cart
     When user adds all items into cart
     Then verify cart icon displays total count of items on cart
     When user click on cart icon
@@ -34,7 +34,7 @@ Feature: verify assignment test cases for saucedemo
     Then verify all items on cart is present in review page
     And verify total price displayed on review page is correct
 
-  Scenario:
+  Scenario:verify if user state is reset after placing order
     When user adds all items into cart
     Then verify cart icon displays total count of items on cart
     When user click on cart icon
